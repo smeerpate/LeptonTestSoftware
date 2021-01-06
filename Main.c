@@ -87,8 +87,9 @@ void main()
         //Radiometry values are the temperature in Kelvin * 100.
         float tempK = radValue/100;
         float tempC = tempK - 273.15;
+        float tempFpa = lepton_get_fpaTemp();
         
-        printf("[INFO] #Temperature = %.2f C\n", tempC);
+        printf("[INFO] #Temperature = %.2f C -- FPA temperature = %.2f C\n", tempC, tempFpa);
         usleep(5000000);
         if (mbIntervalCnt>=6)
         {
